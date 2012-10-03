@@ -138,20 +138,29 @@
 
 	$.fn.removeTag = function(value) {
 		value = unescape(value);
+
 		this.each(function() {
 			var id = $(this).attr('id');
 
 			var old = $(this).val().split(delimiter[id]);
 
-			$('#'+id+'_tagsinput .tag').fadeOut();
-			str = '';
+			$('#'+id+'_tagsinput .tag span').each(function(){
+				if ( $(this).text().trim() == value ) {
+					$(this).parent().fadeOut(250, function() { $(this).remove() });
+				}
+			});
+
+			var tagslist = new Array();
+
 			for (i=0; i< old.length; i++) {
 				if (old[i]!=value) {
-					str = str + delimiter[id] +old[i];
+					tagslist.push( old[i] );
 				}
 			}
 
-			$.fn.tagsInput.importTags(this,str);
+console.log('new tags',tagslist);
+
+			$.fn.tagsInput.updateTagsField(this,tagslist);
 
 			if (tags_callbacks[id] && tags_callbacks[id]['onRemoveTag']) {
 				var f = tags_callbacks[id]['onRemoveTag'];
