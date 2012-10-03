@@ -1,0 +1,87 @@
+/* VARIABLES */
+
+@inputBackground: #fff;
+@inputBorder: #ccc;
+@inputText: #000;
+@tagBackground: #cde69c;
+@tagBorder: #a5d24a;
+@tagText: #638421;
+@tagLink: #82ad2b;
+@invalidBackground: #fbd8db;
+@invalidText: #90111a;
+
+
+
+/* MIXINS */
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/* STYLE */
+
+.tagsinput {
+	width: 300px;
+	height: 100px;
+	padding: 5px;
+	overflow-y: auto;
+	background: @inputBackground;
+	border: 1px solid @inputBorder;
+
+	.tag {
+		display: block;
+		float: left;
+		padding: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		font-family: helvetica;
+		font-size: 13px;
+		color: @tagText;
+		text-decoration: none;
+		background: @tagBackground;
+		border: 1px solid @tagBorder;
+		.border-radius(2px);
+
+		a {
+			font-size: 11px;
+			font-weight: bold;
+			color: @tagLink;
+			text-decoration: none;
+		}
+
+	}
+
+
+	input {
+		width: 80px;
+		padding: 5px;
+		margin: 0;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		font-family: helvetica;
+		font-size: 13px;
+		color: @inputText;
+		background: transparent;
+		border: 1px solid transparent;
+		outline: 0;
+	}
+
+	div {
+		display: block;
+		float: left;
+	}
+
+}
+
+.tags_clear {
+	width: 100%;
+	height: 0;
+	clear: both;
+}
+
+.not_valid {
+	color: #90111a !important;
+	background: #fbd8db !important;
+}
