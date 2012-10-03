@@ -1,4 +1,4 @@
-div.tagsinput {
+.tagsinput {
   width: 300px;
   height: 100px;
   padding: 5px;
@@ -7,7 +7,7 @@ div.tagsinput {
   border: 1px solid #cccccc;
 }
 
-div.tagsinput span.tag {
+.tagsinput .tag {
   display: block;
   float: left;
   padding: 5px;
@@ -24,14 +24,14 @@ div.tagsinput span.tag {
           border-radius: 2px;
 }
 
-div.tagsinput span.tag a {
+.tagsinput .tag a {
   font-size: 11px;
   font-weight: bold;
   color: #82ad2b;
   text-decoration: none;
 }
 
-div.tagsinput input {
+.tagsinput input {
   width: 80px;
   padding: 5px;
   margin: 0;
@@ -45,7 +45,7 @@ div.tagsinput input {
   outline: 0;
 }
 
-div.tagsinput div {
+.tagsinput div {
   display: block;
   float: left;
 }
