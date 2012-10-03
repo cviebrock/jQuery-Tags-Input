@@ -158,8 +158,6 @@
 				}
 			}
 
-console.log('new tags',tagslist);
-
 			$.fn.tagsInput.updateTagsField(this,tagslist);
 
 			if (tags_callbacks[id] && tags_callbacks[id]['onRemoveTag']) {
