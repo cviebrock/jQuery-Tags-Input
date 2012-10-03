@@ -102,7 +102,7 @@
 					$('<span>').text(value).append('&nbsp;&nbsp;'),
 					$('<a>', {
 						href  : '#',
-						title : 'Removing tag',
+						title : 'Remove tag',
 						text  : '×'
 					}).click(function () {
 						return $('#' + id).removeTag(escape(value));
@@ -143,7 +143,7 @@
 
 			var old = $(this).val().split(delimiter[id]);
 
-			$('#'+id+'_tagsinput .tag').remove();
+			$('#'+id+'_tagsinput .tag').fadeOut();
 			str = '';
 			for (i=0; i< old.length; i++) {
 				if (old[i]!=value) {

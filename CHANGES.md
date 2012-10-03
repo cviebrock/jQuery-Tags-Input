@@ -4,3 +4,4 @@
 - changed the character on tags used to delete that tag from a lowercase "x" to "×" (the `&times;` character)
 - re-minified the Javascript
 - converted the CSS to [LESS](http://lesscss.org), and recompiled
+- added build script to easy minification of js/css files
