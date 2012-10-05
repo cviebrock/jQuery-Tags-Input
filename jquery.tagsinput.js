@@ -103,6 +103,7 @@
 					$('<a>', {
 						href  : '#',
 						title : 'Remove tag',
+						rel   : 'tooltip',
 						text  : '×'
 					}).click(function () {
 						return $('#' + id).removeTag(escape(value));

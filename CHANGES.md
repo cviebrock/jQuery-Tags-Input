@@ -6,3 +6,4 @@
 - converted the CSS to [LESS](http://lesscss.org), and recompiled
 - added build script to easy minification of js/css files
 - removing a tag now fades it out, and doesn't require rebuilding the entire tag display
+- added rel="toolip" to the delete link on tags (for possible Twitter Bootstrap use)
